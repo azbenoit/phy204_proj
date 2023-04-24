@@ -1,0 +1,11 @@
+# ninja log v5
+0	24	1682362506178444400	phy204_proj_autogen/timestamp	673b71f341369d23
+0	24	1682362506178444400	phy204_proj_autogen/mocs_compilation.cpp	673b71f341369d23
+0	24	1682362506178444400	/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/phy204_proj_autogen/timestamp	673b71f341369d23
+0	24	1682362506178444400	/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/phy204_proj_autogen/mocs_compilation.cpp	673b71f341369d23
+24	29	1682362506186444454	phy204_proj_autogen/EWIEGA46WW/qrc_qml.cpp	5da900b64fe6944e
+24	29	1682362506186444454	/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/phy204_proj_autogen/EWIEGA46WW/qrc_qml.cpp	5da900b64fe6944e
+29	41	1682362506198444535	CMakeFiles/phy204_proj.dir/phy204_proj_autogen/mocs_compilation.cpp.o	5f5bc7e9c373a352
+29	47	1682362506206444589	CMakeFiles/phy204_proj.dir/phy204_proj_autogen/EWIEGA46WW/qrc_qml.cpp.o	a64aee17672e2bd
+29	1024	1682362507182451173	CMakeFiles/phy204_proj.dir/main.cpp.o	641f1f9a426b7709
+1024	1255	1682362507410452711	phy204_proj	b8acd7b67cba6760
