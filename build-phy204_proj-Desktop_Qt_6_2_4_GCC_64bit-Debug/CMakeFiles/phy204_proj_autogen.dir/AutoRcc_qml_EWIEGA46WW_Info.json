@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/phy204_proj_autogen",
+	"CMAKE_BINARY_DIR" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/alixb1908/Documents/uni/phy204/phy204_proj",
+	"CMAKE_SOURCE_DIR" : "/home/alixb1908/Documents/uni/phy204/phy204_proj",
+	"INCLUDE_DIR" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/phy204_proj_autogen/include",
+	"INPUTS" : [ "/home/alixb1908/Documents/uni/phy204/phy204_proj/main.qml" ],
+	"LOCK_FILE" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/phy204_proj_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "/home/alixb1908/Qt/6.2.4/gcc_64/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/phy204_proj_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/alixb1908/Documents/uni/phy204/phy204_proj/qml.qrc",
+	"VERBOSITY" : 0
+}
