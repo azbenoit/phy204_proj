@@ -1,9 +1,0 @@
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/phy204_proj.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install/local.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install/strip.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/phy204_proj_autogen_timestamp_deps.dir
-/home/alixb1908/Documents/uni/phy204/build-phy204_proj-Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/phy204_proj_autogen.dir
