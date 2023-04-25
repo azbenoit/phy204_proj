@@ -1,3 +1,0 @@
-/home/alixb1908/Documents/uni/phy204/phy204_proj/build/CMakeFiles/main.dir
-/home/alixb1908/Documents/uni/phy204/phy204_proj/build/CMakeFiles/edit_cache.dir
-/home/alixb1908/Documents/uni/phy204/phy204_proj/build/CMakeFiles/rebuild_cache.dir
