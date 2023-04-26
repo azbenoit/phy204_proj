@@ -1,34 +1,94 @@
-// #include <QGuiApplication>
-// #include <QQmlApplicationEngine>
-
+#include <chrono>
 #include <iostream>
-#include <iterator>
-#include <algorithm>
-#include <boost/lambda/lambda.hpp>
-#include <boost/timer/timer.hpp>
+#include <omp.h>
 
-int main(int argc, char *argv[])
-{
-// #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-//     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-// #endif
-//     QGuiApplication app(argc, argv);
+using namespace std;
+using namespace std::chrono;
 
-//     QQmlApplicationEngine engine;
-//     const QUrl url(QStringLiteral("qrc:/main.qml"));
-//     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-//                      &app, [url](QObject *obj, const QUrl &objUrl) {
-//         if (!obj && url == objUrl)
-//             QCoreApplication::exit(-1);
-//     }, Qt::QueuedConnection);
-//     engine.load(url);
+#define L 100
+#define V 100
+#define eps 1e-5
 
-//     return app.exec();
-     using namespace boost::lambda;
-    typedef std::istream_iterator<int> in;
-    // boost::timer::auto_cpu_timer t;
-    std::for_each(
-        in(std::cin), in(), std::cout << (_1 * 3) << " " );
-// std::cout << myTimer.elapsed();
-    return 0;
+int main(int argc, char *argv[]) {
+  float phi[L * L + (L + 1) * L / 2] = {0};
+  float err = eps + 1;
+
+  // set boundary
+
+  float slope = (float)V / (float)L;
+
+  for (int x = 0; x < L + 1; ++x) {
+    phi[L - x] = x * slope;
+  }
+
+  high_resolution_clock::time_point t1 = high_resolution_clock::now();
+
+  int iter = 0;
+
+  while (err > eps) {
+    ++iter;
+    err = 0;
+#pragma omp parallel for shared(phi) schedule(static)
+    for (int y = 1; y < L - 1; ++y) {
+      int offset = y * L + y * (y + 1) / 2;
+
+      // for (int x = 1; x < 2 * L - 1; ++x) {
+      float old = phi[offset];
+
+      phi[offset] = 0.5 * (phi[offset + 1] + phi[offset + L + y + 2]);
+
+      float temp_err = phi[offset] - old;
+
+      if (temp_err > err) {
+        err = temp_err;
+      }
+
+      for (int x = 1; x < L + 1 + y; ++x) {
+        float old = phi[offset + x];
+
+        phi[offset + x] = 0.25 * (phi[offset + x + 1] + phi[offset + x - 1] +
+                                  phi[offset + x - (L + y + 1)] +
+                                  phi[offset + x + L + y + 2]);
+
+        float temp_err = phi[offset + x] - old;
+
+        if (temp_err > err) {
+          err = temp_err;
+        }
+      }
+    }
+  }
+  // #pragma omp parallel for shared(phi) schedule(static)
+  //     for (int x = 1; x < 2 * L - 1; ++x) {
+  //       for (int y = 1; y < L - 1; ++y) {
+  //         float old = phi[y][x];
+  //         phi[y][x] = 0.25 * (phi[y][x + 1] + phi[y][x - 1] + phi[y + 1][x]
+  //         +
+  //                             phi[y - 1][x]);
+
+  //         for (int x = 0; x < L - 1; x++) {
+  //           phi[0][x] = phi[L - 1 - x][L - 1];
+  //         }
+
+  //         float temp_err = phi[y][x] - old;
+
+  //         if (temp_err > err) {
+  //           err = temp_err;
+  //         }
+  //       }
+  //     }
+
+  //     for (int x = 0; x < L - 1; x++) {
+  //       phi[0][x] = phi[L - 1 - x][L - 1];
+  //     }
+  //   }
+
+  high_resolution_clock::time_point t2 = high_resolution_clock::now();
+  duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
+
+  cout << iter << endl;
+  cout << err << endl;
+  std::cout << "It took me " << time_span.count() << " seconds." << endl;
+
+  return 0;
 }
