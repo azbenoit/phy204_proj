@@ -106,7 +106,9 @@
         "functional": "cpp",
         "iterator": "cpp",
         "utility": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "*.tcc": "cpp",
+        "filesystem": "cpp"
     },
     "cmake.buildEnvironment": {
         "LDFLAGS": "-L/opt/homebrew/opt/libomp/lib",

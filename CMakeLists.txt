@@ -6,6 +6,9 @@ add_executable(phy204_proj main.cpp)
 find_package(OpenMP)
 target_link_libraries(phy204_proj PUBLIC OpenMP::OpenMP_CXX)
 
+target_include_directories(phy204_proj PRIVATE
+    libs
+)
 # target_include_directories(main PRIVATE
 #     libs/boost_1_82_0
 # )
